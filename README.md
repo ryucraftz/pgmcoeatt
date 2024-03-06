@@ -35,6 +35,7 @@ FlutterFire Attendance is licensed under MIT.
 Need assistance? Reach us at [your_email@example.com](mailto:your_email@example.com).
 
 **Graph Tree:**
+```
 AttendancePro
 ├── lib
 │ ├── models
@@ -54,7 +55,7 @@ AttendancePro
 │ └── ...
 └── ios
 └── ...
-
+```
 ---
 
 *Make attendance hassle-free with FlutterFire Attendance!*
