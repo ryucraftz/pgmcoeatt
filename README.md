@@ -32,7 +32,7 @@ FlutterFire Attendance is licensed under MIT.
 
 **Contact:**
 
-Need assistance? Reach us at [your_email@example.com](mailto: kiritsao98@gmail.com).
+Need assistance? Reach us at(mailto: kiritsao98@gmail.com).
 
 **Graph Tree:**
 ```
