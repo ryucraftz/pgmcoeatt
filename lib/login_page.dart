@@ -15,6 +15,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
   late FocusNode _emailFocusNode;
   late FocusNode _passwordFocusNode;
   bool _passwordVisibility = false;
+  String? _errorMessage;
 
   @override
   void initState() {
@@ -46,11 +47,20 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
         MaterialPageRoute(builder: (context) => TeacherPage()),
       );
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        print('No user found for that email.');
-      } else if (e.code == 'wrong-password') {
-        print('Wrong password provided for that user.');
-      }
+      setState(() {
+        if (e.code == 'user-not-found') {
+          _errorMessage = 'No user found for that email.';
+        } else if (e.code == 'wrong-password') {
+          _errorMessage = 'Wrong password provided for that user.';
+        } else {
+          _errorMessage = 'Login failed. Please try again later.';
+        }
+      });
+    } catch (e) {
+      print('Error: $e');
+      setState(() {
+        _errorMessage = 'Login failed. Please try again later.';
+      });
     }
   }
 
@@ -81,6 +91,13 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                   ),
                 ),
                 SizedBox(height: 120),
+                if (_errorMessage != null)
+                  Text(
+                    _errorMessage!,
+                    style: TextStyle(
+                      color: Colors.red,
+                    ),
+                  ),
                 TextFormField(
                   controller: _emailController,
                   focusNode: _emailFocusNode,
@@ -193,6 +210,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF507583),
                     minimumSize: Size(double.infinity, 50),
                     padding: EdgeInsets.zero,
                     shape: RoundedRectangleBorder(
