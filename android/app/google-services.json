@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "346394510244",
+    "project_id": "pgmcoeatt",
+    "storage_bucket": "pgmcoeatt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346394510244:android:b5e04d137d87fb2f2ff731",
+        "android_client_info": {
+          "package_name": "com.example.pgmcoe_att"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3rM6lEdhogOuJSn7GSWC5R7g6VqdHMa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
