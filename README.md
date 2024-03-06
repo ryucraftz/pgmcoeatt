@@ -35,26 +35,25 @@ FlutterFire Attendance is licensed under MIT.
 Need assistance? Reach us at [your_email@example.com](mailto:your_email@example.com).
 
 **Graph Tree:**
-
- AttendancePro
-    ├── lib
-    │   ├── models
-    │   │   ├── user.dart
-    │   │   └── event.dart
-    │   ├── screens
-    │   │   ├── login_screen.dart
-    │   │   ├── home_screen.dart
-    │   │   └── event_details_screen.dart
-    │   ├── services
-    │   │   ├── authentication_service.dart
-    │   │   └── event_service.dart
-    │   └── widgets
-    │       ├── attendance_chart.dart
-    │       └── event_card.dart
-    ├── android
-    │   └── ...
-    └── ios
-        └── ...
+AttendancePro
+├── lib
+│ ├── models
+│ │ ├── user.dart
+│ │ └── event.dart
+│ ├── screens
+│ │ ├── login_screen.dart
+│ │ ├── home_screen.dart
+│ │ └── event_details_screen.dart
+│ ├── services
+│ │ ├── authentication_service.dart
+│ │ └── event_service.dart
+│ └── widgets
+│ ├── attendance_chart.dart
+│ └── event_card.dart
+├── android
+│ └── ...
+└── ios
+└── ...
 
 ---
 
