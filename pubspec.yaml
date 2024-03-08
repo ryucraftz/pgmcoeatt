@@ -39,6 +39,16 @@ dependencies:
   provider: ^6.1.2
   firebase_auth: ^4.17.7
   font_awesome_flutter: ^10.7.0
+  google_fonts: ^6.2.0
+  firebase_database: ^10.4.8
+  geolocator: ^8.0.5
+  line_icons: ^2.0.1
+  shared_preferences: ^2.0.12
+  intl: ^0.17.0
+  day_night_time_picker: ^1.0.5
+  dialogs: ^0.0.7
+  expandable: ^5.0.1
+  cloud_firestore: ^4.15.7
 
 dev_dependencies:
   flutter_test:
