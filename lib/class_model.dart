@@ -1,12 +1,26 @@
+// class_model.dart
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Class {
+class ClassModel {
+  final String id;
   final String name;
+  final String description;
+  final int capacity;
 
-  Class({required this.name});
+  ClassModel({
+    required this.id, // Updated to include 'required'
+    required this.name,
+    required this.description,
+    required this.capacity,
+  });
 
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-    };
+  factory ClassModel.fromFirestore(DocumentSnapshot doc) {
+    Map data = doc.data() as Map<String, dynamic>;
+    return ClassModel(
+      id: doc.id,
+      name: data['name'] ?? '',
+      description: data['description'] ?? '',
+      capacity: data['capacity'] ?? 0,
+    );
   }
 }
